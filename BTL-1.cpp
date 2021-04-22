@@ -69,3 +69,14 @@ void Recordfile(EL *employeeList,int n){                    //Ghi thong tin nhan
 	fprintf(fp,"\n\n \t\t\t%-10s","~~~HET~~~");
 	fclose(fp);
 }
+void Sort(EL *employeeList,int n){
+EL temp;
+for(int i=0;i<n-1;i++){
+for(int j=i+1;j<n;j++)
+if(strcmp((employeeList+i)->Province,(employeeList+j)->Province)<0){
+temp=*(employeeList+i);
+*(employeeList+i)=*(employeeList+j);
+*(employeeList+j)=temp;
+}
+}
+}
