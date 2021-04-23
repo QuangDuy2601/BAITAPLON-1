@@ -69,3 +69,16 @@ void Recordfile(EL *employeeList,int n){                    //Ghi thong tin nhan
 	fprintf(fp,"\n\n \t\t\t%-10s","~~~HET~~~");
 	fclose(fp);
 }
+void Cout(EL *employeeList,int n){             //Thong ke tinh do co bao nhieu nhan vien
+int dem=1;
+for(int i=0;i<n;i++){
+if(strcmp((employeeList+i)->Province,(employeeList+i+1)->Province)==0){
+dem++;      
+       }
+        else{
+        printf("\n%s co %d nhan vien!",(employeeList+i)->Province,dem);
+        dem==1;
+}
+    }
+}
+
